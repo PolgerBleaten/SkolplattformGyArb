@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background-image: -webkit-linear-gradient(left, #ab058b 0, indigo 100%);
+}
+
+.HeaderBackground {
+  height: 12vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(26, 23, 23, 0.89);
+}
+
+.HeaderText {
+  padding-left: 10vw;
+  color: white;
+  text-transform: uppercase;
+  font-family: soleto, sans-serif;
+  font-style: normal;
+}
+
+.HeaderText:hover {
+  transform: scale(1.1);
+}
+
+.NtiLogga {
+  padding-left: 1.5vw;
+  height: 17vh;
+  width: 15vw;
+}
+
+.Ntilogga:hover {
+  background-color: gray;
+}
