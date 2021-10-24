@@ -6,22 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schoolsoft - NTI</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <container class="HeaderBackground">
-            <img class="NtiLogga" src="Images/NtiLoggaVit.png">
-            <h1 class="HeaderText">Startsida</h1>
-            <h1 class="HeaderText">Skolinfo</h1>
-            <h1 class="HeaderText">Min profil</h1>
-        </container>
-        
+            <img class="NtiLoggaHeader" src="Images/NtiLoggaVit.png">
+            <a href="" data-linked-article="startSida">Startsida</a>
+            <a href="" data-linked-article="skolInfo">Skolinfo</a>
+            <a href="" data-linked-article="minProfil">Min profil</a>
+        </container>       
     </header>
     <main>
+        <nav>
+            <h1>Nav sidebar</h1>
+        </nav>
+        <article id="startSida">
+            <section class="schema">
+                <img src="Images/Schema.PNG">
+            </section>
+            <section class="annat">
+                <div>
+                    <h1>Notiser</h1>
+                </div>
+                <div>
+                    <h1>Resultat</h1>
+                </div>
+                <div>
+                    <h1>Nyheter</h1>
+                </div>
+                <div>
+                    <h1>Närvaro</h1>
+                </div>
+            </section>
+        </article>
+        <article id="skolInfo" class="hidden">
+            <h1>Skolinfo</h1>
+        </article>
+        <article id="minProfil" class="hidden">
+            <h1>Min profil</h1>
+        </article>
 
     </main>
     <footer>
-
+        <img src="Images/NtiLoggaVit.png">
     </footer>
 </body>
 </html>
