@@ -5,7 +5,7 @@
 }
 
 header {
-  height: 25vh;
+  height: 20vh;
   display: flex;
   align-items: center;
   background-image: -webkit-linear-gradient(left, #ab058b 0, indigo 100%);
@@ -58,7 +58,8 @@ header a:hover {
 }
 
 main {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 nav {
@@ -68,20 +69,33 @@ nav {
 
 article {
   width: 80vw;
+  height: 60vh;
 }
 
 #startSida {
   display: flex;
 }
 
-.schema {
-  width: 35vw;
+h3 {
+  font-size: 1.5vw;
 }
 
-.schema img {
+h4 {
+  font-size: 1vw;
+}
+.schema {
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 35vw;
-  height: 50vh;
-  margin-top: 7.5vh;
+  display: grid;
+  height: 60vh;
+  overflow-y: auto;
+  grid-template-rows: 5vw 30vw;
+}
+
+.schemanav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .annat {
@@ -116,4 +130,20 @@ footer {
 footer img {
   height: 15vh;
   width: 12vw;
+}
+.ämne {
+  height: 10vh;
+  border: solid gray 1px;
+  border-left: gray solid 5px;
+}
+.schema :first-of-type {
+  border-left: 5px solid rgb(8, 202, 56);
+  border-top-right-radius: 10px;
+}
+.schema :last-of-type {
+  border-bottom-right-radius: 10px;
+}
+.ämne p {
+  font-size: 0.7vw;
+  margin-top: 0.5vw;
 }
