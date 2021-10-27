@@ -136,11 +136,11 @@ footer img {
   border: solid gray 1px;
   border-left: gray solid 5px;
 }
-.schema :first-of-type {
-  border-left: 5px solid rgb(8, 202, 56);
+.lektioner div:first-of-type {
+  border-left: solid 5px green;
   border-top-right-radius: 10px;
 }
-.schema :last-of-type {
+.lektioner div:last-of-type {
   border-bottom-right-radius: 10px;
 }
 .ämne p {
