@@ -4,7 +4,13 @@ let vecka = document.querySelector("[data-vecka]");
 let månad = document.querySelector("[data-månad]");
 let links = document.querySelectorAll("a");
 let articles = document.querySelectorAll("article");
-
+const firstDate = new Date();
+const secondDate = new Date(Date.now() + 1000000000);
+const calendar = new dhx.Calendar("kalender", {
+    css: "dhx_widget--bordered",
+    value: [firstDate, secondDate]
+});
+Gömkalender();
 console.log(articles);
 
 idag.addEventListener("click", Idag);
@@ -19,12 +25,25 @@ links.forEach((link) => {
     });
 });
 
+function Gömkalender(){
+    document.getElementById("kalender").classList.add("hidden");
+}
+
+function Visakalender(){
+    document.getElementById("kalender").classList.remove("hidden");
+}
+
+function Visaschema(){
+    document.getElementById("lektioner").classList.remove("hidden");
+}
+
 function Gömschema(){
     document.getElementById("lektioner").classList.add("hidden");
 }
 
 function Idag(){
-    Gömschema();
+    Gömkalender();
+    Visaschema();
 }
 
 function Vecka(){
@@ -32,5 +51,6 @@ function Vecka(){
 }
 
 function Månad(){
-
+    Gömschema();
+    Visakalender();
 }
