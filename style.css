@@ -64,7 +64,7 @@ main {
 
 nav {
   width: 20vw;
-  height: 60vh;
+  height: 65vh;
 }
 nav h4 {
 }
@@ -160,4 +160,27 @@ footer img {
 .ämne p {
   font-size: 0.7vw;
   margin-top: 0.5vw;
+}
+
+.skolInfo {
+  width: 80vw;
+  height: 120vh;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  background: -webkit-linear-gradient(
+    to right,
+    #b24592,
+    #f15f79
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b24592,
+    #f15f79
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#datum {
+  grid-column: 2;
+  grid-row: 1;
 }
