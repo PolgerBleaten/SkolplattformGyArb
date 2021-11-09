@@ -19,8 +19,12 @@ links.forEach((link) => {
     });
 });
 
+function Gömschema(){
+    document.getElementById("lektioner").classList.add("hidden");
+}
+
 function Idag(){
-    
+    Gömschema();
 }
 
 function Vecka(){
