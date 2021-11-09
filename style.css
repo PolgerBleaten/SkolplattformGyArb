@@ -119,12 +119,15 @@ h4 {
 
 footer {
   background-image: -webkit-linear-gradient(left, #ab058b 0, indigo 100%);
-  bottom: 0%;
+  bottom: 0;
+  left: 0;
+  right: 0;
   margin-top: auto;
   min-height: 11vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 
 footer img {
@@ -135,6 +138,15 @@ footer img {
   height: 10vh;
   border: solid gray 1px;
   border-left: gray solid 5px;
+}
+#kalender {
+  height: 100%;
+}
+#kalenderram {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #lektioner div:first-of-type {
   border-left: solid 5px green;
