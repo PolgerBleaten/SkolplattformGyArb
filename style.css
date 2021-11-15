@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+}
+
 header {
   height: 20vh;
   display: flex;
@@ -123,15 +127,11 @@ h4 {
 
 footer {
   background-image: -webkit-linear-gradient(left, #ab058b 0, indigo 100%);
-  margin-top: auto;
-  min-height: 11vh;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  position: sticky;
+  top: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
 }
 
 footer img {
@@ -169,21 +169,37 @@ footer img {
   width: 80vw;
   height: 120vh;
   display: grid;
-  grid-template-rows: 50% 50%;
-  grid-template-columns: 50% 50%;
-  background: -webkit-linear-gradient(
-    to right,
-    #b24592,
-    #f15f79
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #b24592,
-    #f15f79
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
+  background: #2193b0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #datum {
-  grid-column: 2;
+  grid-column: 1 / span 2;
   grid-row: 1;
+  padding-left: 5%;
+}
+#datum ul {
+  list-style-type: none;
+  padding-top: 3%;
+}
+#datum ul dt {
+  padding-bottom: 2%;
+}
+
+#information  {
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 2;
+}
+
+#elevhälsa {
+  grid-column: 3 / span 2;
+  grid-row: 2;
+}
+
+#kontakt {
+  grid-column: 3 / span 2;
+  grid-row: 4;
 }
