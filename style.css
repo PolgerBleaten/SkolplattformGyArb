@@ -99,7 +99,17 @@ h4 {
 
 .schemanav {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.schemanav button {
+  margin-right: 2vw;
+  margin-left: 2vw;
+  border: none;
+}
+
+#idag {
+  background-color: green;
 }
 
 .annat {
