@@ -4,6 +4,9 @@ let vecka = document.querySelector("[data-vecka]");
 let månad = document.querySelector("[data-månad]");
 let links = document.querySelectorAll("a");
 let articles = document.querySelectorAll("article");
+let start = document.querySelector("[data-start]");
+let profil = document.querySelector("[data-profil]");
+let info = document.querySelector("[data-info]");
 const firstDate = new Date();
 const secondDate = new Date(Date.now() + 1000000000);
 const calendar = new dhx.Calendar("kalender", {
@@ -12,10 +15,14 @@ const calendar = new dhx.Calendar("kalender", {
 });
 Gömkalender();
 console.log(articles);
-
+var sidebar = document.getElementById("sidebar");
 idag.addEventListener("click", Idag);
 vecka.addEventListener("click", Vecka);
 månad.addEventListener("click", Månad);
+
+start.addEventListener("click", VisaNav);
+info.addEventListener("click", GömNav);
+profil.addEventListener("click", VisaNav);
 
 links.forEach((link) => {
     link.addEventListener("click", (event) => {
@@ -44,7 +51,12 @@ function RemoveColorOfButtons(){
     document.getElementById("idag").style.backgroundColor = "white";
     document.getElementById("vecka").style.backgroundColor = "white";
     document.getElementById("månad").style.backgroundColor = "white";
-
+}
+function GömNav(){
+    sidebar.style.display = "none";
+}
+function VisaNav(){
+    sidebar.style.display = "initial"
 }
 function Idag(){
     RemoveColorOfButtons();
