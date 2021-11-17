@@ -40,17 +40,27 @@ function Visaschema(){
 function Gömschema(){
     document.getElementById("lektioner").classList.add("hidden");
 }
+function RemoveColorOfButtons(){
+    document.getElementById("idag").style.backgroundColor = "white";
+    document.getElementById("vecka").style.backgroundColor = "white";
+    document.getElementById("månad").style.backgroundColor = "white";
 
+}
 function Idag(){
+    RemoveColorOfButtons();
     Gömkalender();
     Visaschema();
+    document.getElementById("idag").style.backgroundColor = "green";
 }
 
 function Vecka(){
-
+    RemoveColorOfButtons();
+    document.getElementById("vecka").style.backgroundColor = "green";
 }
 
 function Månad(){
+    RemoveColorOfButtons();
     Gömschema();
     Visakalender();
+    document.getElementById("månad").style.backgroundColor = "green";
 }
