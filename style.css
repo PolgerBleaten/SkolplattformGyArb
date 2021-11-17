@@ -194,7 +194,7 @@ footer img {
 
 #skolInfo {
   font-family: Lato, sans-serif;
-  width: 80vw;
+  width: 100vw;
   height: 120vh;
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
