@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -146,10 +152,8 @@ h4 {
 
 footer {
   background-image: -webkit-linear-gradient(left, #ab058b 0, indigo 100%);
-  position: fixed;
-  bottom: 0%;
-  right: 0%;
-  left: 0%;
+  position: sticky;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,9 +192,9 @@ footer img {
   margin-top: 0.5vw;
 }
 
-.skolInfo {
-  width: 100%;
-  right: 0;
+#skolInfo {
+  font-family: Lato, sans-serif;
+  width: 80vw;
   height: 120vh;
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
