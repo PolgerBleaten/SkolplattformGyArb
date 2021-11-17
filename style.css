@@ -47,6 +47,14 @@ header a {
   background-color: rgb(26, 23, 23);
 }
 
+button {
+  background-color: white;
+}
+
+button:hover {
+  background-color: lightgreen;
+}
+
 header a:hover {
   background-color: rgb(43, 39, 39);
 }
@@ -143,11 +151,15 @@ h4 {
 
 footer {
   background-image: -webkit-linear-gradient(left, #ab058b 0, indigo 100%);
-  position: sticky;
-  top: 100%;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  height: 15vh;
 }
 
 footer img {
@@ -188,6 +200,10 @@ footer img {
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
   grid-template-columns: 25% 25% 25% 25%;
+<<<<<<< HEAD
+=======
+  padding-bottom: 15vh;
+>>>>>>> 37394a30edef41055097a5ecd58a1fcc3e6c5fb1
   background: #2193b0; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
