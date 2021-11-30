@@ -196,10 +196,13 @@ footer img {
   grid-column: 1/4;
   font-family: Lato, sans-serif;
   width: 100%;
+<<<<<<< HEAD
   height: 120vh;
+=======
+  height: 400vh;
+>>>>>>> 5aa8262857225eb8ac2b0f8f4fbdf869d2db3ae6
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
-  grid-template-columns: 25% 25% 25% 25%;
   background: #2193b0; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -237,22 +240,28 @@ footer img {
 }
 
 #information {
-  grid-column: 1 / span 2;
-  grid-row: 3 / span 2;
+  grid-row: 2;
   padding-left: 5%;
   padding-right: 2%;
 }
 
 #elevhälsa {
-  grid-column: 3 / span 2;
-  grid-row: 2;
+  grid-row: 3;
   padding-right: 5%;
   padding-left: 2%;
 }
 
 #kontakt {
-  grid-column: 3 / span 2;
-  grid-row: 4;
+  grid-column: 1/2;
+  grid-row-start: 4;
+}
+
+#skolinfo div {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 0/5;
 }
 
 #minProfil {
