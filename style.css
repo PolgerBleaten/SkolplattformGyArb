@@ -259,3 +259,20 @@ footer img {
   align-items: center;
   grid-column: 0/5;
 }
+.scroll-horizontellt {
+  width: 90vw;
+  margin-right: 4vw;
+  margin-left: 4vw;
+  display: grid;
+  grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
+  height: 20vh;
+}
+.hälsinfo {
+  position: absolute;
+}
+.knapphöger {
+  grid-column: 5/5;
+}
+.knappvänster {
+  grid-column: 1/1;
+}

@@ -7,6 +7,13 @@ let articles = document.querySelectorAll("article");
 let start = document.querySelector("[data-start]");
 let profil = document.querySelector("[data-profil]");
 let info = document.querySelector("[data-info]");
+let right = document.querySelector("[data-hälsahöger]");
+let hälsavänster = document.querySelector("[data-hälsavänster]");
+let hälsinfo = [document.getElementById("hälsinfo1"), document.getElementById("hälsinfo2"), document.getElementById("hälsinfo3"), document.getElementById("hälsinfo4")]
+var h;
+var e;
+var f;
+var t;
 const firstDate = new Date();
 const secondDate = new Date(Date.now() + 1000000000);
 const calendar = new dhx.Calendar("kalender", {
@@ -14,8 +21,14 @@ const calendar = new dhx.Calendar("kalender", {
     value: [firstDate, secondDate]
 });
 Gömkalender();
+hälsinfo[3].style.display = "none";
 console.log(articles);
 var sidebar = document.getElementById("sidebar");
+
+Bläddravänster();
+right.addEventListener("click", Bläddrahöger)
+hälsavänster.addEventListener("click", Bläddravänster)
+
 idag.addEventListener("click", Idag);
 vecka.addEventListener("click", Vecka);
 månad.addEventListener("click", Månad);
@@ -31,6 +44,42 @@ links.forEach((link) => {
         document.querySelector("#" + link.getAttribute("data-linked-article")).classList.remove("hidden");    
     });
 });
+
+function Bläddravänster(){
+    h = hälsinfo[3];
+    e = hälsinfo[2];
+    f = hälsinfo[1];
+    t = hälsinfo[0];
+    hälsinfo[3] = t;
+    hälsinfo[2] = h;
+    hälsinfo[1] = e;
+    hälsinfo[0] = f;
+ 
+    hälsinfo[0].style.display = "initial";
+    hälsinfo[0].style.gridColumn = "2/2";
+    hälsinfo[1].style.gridColumn = "3/3";
+    hälsinfo[2].style.display = "initial";
+    hälsinfo[2].style.gridColumn = "4/4";
+    hälsinfo[3].style.display = "none";
+}
+function Bläddrahöger(){
+    h = hälsinfo[3];
+    e = hälsinfo[2];
+    f = hälsinfo[1];
+    t = hälsinfo[0];
+    hälsinfo[3] = e;
+    hälsinfo[2] = f;
+    hälsinfo[1] = t;
+    hälsinfo[0] = h;
+ 
+
+    hälsinfo[0].style.display = "initial";
+    hälsinfo[0].style.gridColumn = "2/2";
+    hälsinfo[1].style.gridColumn = "3/3";
+    hälsinfo[2].style.display = "initial";
+    hälsinfo[2].style.gridColumn = "4/4";
+    hälsinfo[3].style.display = "none";
+}
 
 function Gömkalender(){
     document.getElementById("kalender").classList.add("hidden");
