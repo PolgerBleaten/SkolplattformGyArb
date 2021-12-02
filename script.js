@@ -35,7 +35,7 @@ månad.addEventListener("click", Månad);
 
 start.addEventListener("click", VisaNav);
 info.addEventListener("click", GömNav);
-profil.addEventListener("click", VisaNav);
+profil.addEventListener("click", GömNav);
 
 links.forEach((link) => {
     link.addEventListener("click", (event) => {
