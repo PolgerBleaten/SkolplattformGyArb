@@ -212,33 +212,46 @@ footer img {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#hösttermin {
+#höstBakgrund {
   background-image: url("Images/höst.png");
   background-size: cover;
   width: 100%;
   display: flex;
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+  justify-content: center;
+}
+#hösttermin {
+  display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 3vh;
-}
-
-#datum li,
-#datum dt {
-  margin-left: 5vw;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.753);
+  padding: 2vh;
 }
 
 #datum dt {
   font-size: 2vw;
 }
 
-#vårtermin {
+#vårBakgrund {
   background-image: url("Images/vår.png");
   background-size: cover;
   width: 100%;
   display: flex;
+  justify-content: center;
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+}
+
+#vårtermin {
+  display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 3vh;
+  width: 20%;
+  background-color: rgba(255, 255, 255, 0.74);
+  padding: 2vh;
+  border-radius: 5%;
 }
 
 #datum {
@@ -250,7 +263,6 @@ footer img {
 #elevhälsa ul,
 #information ul {
   list-style-type: none;
-  padding-top: 3%;
 }
 
 #elevhälsa li,
