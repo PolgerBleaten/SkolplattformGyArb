@@ -219,6 +219,7 @@ footer img {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 3vh;
 }
 
 #datum li,
@@ -237,6 +238,7 @@ footer img {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 3vh;
 }
 
 #datum {
