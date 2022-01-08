@@ -211,16 +211,8 @@ footer img {
     #2193b0
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
-#höstBakgrund {
-  background-image: url("Images/höst.png");
-}
 #hösttermin {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 30%;
-  background-color: rgba(255, 255, 255, 0.753);
+  background-image: url("Images/höst.png");
   padding: 2vh;
 }
 #datum {
