@@ -10,6 +10,8 @@ let info = document.querySelector("[data-info]");
 let right = document.querySelector("[data-hälsahöger]");
 let hälsavänster = document.querySelector("[data-hälsavänster]");
 let hälsinfo = [document.getElementById("hälsinfo1"), document.getElementById("hälsinfo2"), document.getElementById("hälsinfo3"), document.getElementById("hälsinfo4")]
+let slinfo = document.getElementById("tutorial");
+let slpil = document.getElementById("slpil");
 var h;
 var e;
 var f;
@@ -37,6 +39,8 @@ start.addEventListener("click", VisaNav);
 info.addEventListener("click", GömNav);
 profil.addEventListener("click", GömNav);
 
+slpil.addEventListener("click", VisaSl)
+
 links.forEach((link) => {
     link.addEventListener("click", (event) => {
         event.preventDefault();
@@ -44,6 +48,18 @@ links.forEach((link) => {
         document.querySelector("#" + link.getAttribute("data-linked-article")).classList.remove("hidden");    
     });
 });
+
+slinfo.style.display = "none";
+function VisaSl() {
+    if(slinfo.style.display == "none"){
+        slinfo.style.display = "block";
+        slpil.style.transform = "rotate(90deg)";
+    }
+    else{
+        slpil.style.transform = "rotate(-90deg)";
+        slinfo.style.display = "none";
+    }
+}
 
 function Bläddravänster(){
     h = hälsinfo[3];

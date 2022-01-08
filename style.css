@@ -214,37 +214,65 @@ footer img {
 
 #hösttermin {
   background-image: url("Images/höst.png");
-  background-size: cover;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 3vh;
 }
 
 #datum li,
 #datum dt {
   margin-left: 5vw;
 }
-
+#datum {
+  padding-top: 0%;
+}
 #datum dt {
   font-size: 2vw;
 }
-
+#hösttermin,
 #vårtermin {
-  background-image: url("Images/vår.png");
   background-size: cover;
   width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 4vh 1fr 4vh;
   padding-bottom: 3vh;
+}
+#vårtermin {
+  background-image: url("Images/vår.png");
+}
+
+.kort {
+  border: solid black 2px;
+  border-radius: 5%;
+  backdrop-filter: blur(4px);
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#datumintro {
+  background-image: url(/Images/kalender.png);
+}
+
+.mitten {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kort h3 {
+  font-size: 1.6vw;
+  padding-bottom: 0.2vh;
+}
+.kort p {
+  padding-left: 1vw;
+  padding-bottom: 0.2vh;
 }
 
 #datum {
-  padding-top: 5%;
+  padding-top: 2%;
   grid-column: 1 / span 2;
   grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #datum ul,
 #elevhälsa ul,
@@ -257,6 +285,9 @@ footer img {
 #information li {
   padding-bottom: 2%;
 }
+#datum h1 {
+  padding: 2vw;
+}
 #datum ul dt,
 #elevhälsa ul dt,
 #information ul dt {
@@ -265,8 +296,6 @@ footer img {
 
 #information {
   grid-row: 2;
-  padding-left: 5%;
-  padding-right: 2%;
 }
 
 #elevhälsa {
@@ -317,4 +346,28 @@ footer img {
   max-width: 25vh;
   margin-bottom: 2vh;
   border-radius: 50%;
+}
+
+.matkort {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sl dt {
+  border-bottom: solid black 2px;
+}
+.rad {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#tutorial {
+  padding-top: 2%;
+  padding-bottom: 3%;
 }

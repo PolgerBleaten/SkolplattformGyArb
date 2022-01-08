@@ -96,53 +96,67 @@
         </article>
         <article id="skolInfo" class="hidden">
                 <div id="datum">
-                    <i class="fa-solid fa-calendar"></i>
-                    <h1>LÄSÅRSDATUM 2021/2022</h1>
-                    <ul id="hösttermin">
-                        <dt>Höstterminen 2021</dt>
-                        <li>Skolstart åk. 1: 13 augusti: TE kl. 10.00 & ES/EE kl. 11.00</li>
-                        <li>Skolstart åk. 2: 16 augusti: TE kl. 13.00 & ES/EE kl. 14.00</li>
-                        <li>Skolstart åk. 3: 17 augusti: TE kl. 13.00 & ES/EE kl. 14.00</li>
-                        <li>Höstlov: 1 november – 5 november</li>
-                        <li>Jullov: 20 december – 6 januari</li>
-                    </ul>
-                    <ul id="vårtermin">
-                        <dt>Vårterminen 2022</dt>
-                        <li>7 januari (Studiedag)</li>
-                        <li>10 januari enligt schema</li>
-                        <li>Sportlov: 28 februari – 4 mars</li>
-                        <li>Påsklov: 11 april – 18 april</li>
-                        <li>Lovdagar 26-27 maj</li>
-                        <li>Skolavslutning åk 1 & 2: 2 juni</li>
-                        <li>Student 2022: 3 juni</li>
-                    </ul>
+                    <div id="datumintro">
+                        <h1>LÄSÅRSDATUM 2021/2022</h1>
+                    </div>
+                    <div id="hösttermin">
+                        <div class="kort">
+                            <div class="mitten">
+                                <h3>Höstterminen 2021</h3> 
+                            </div>
+                            <p>Skolstart åk. 1: 13 augusti: TE kl. 10.00 & ES/EE kl. 11.00</p>
+                            <p>Skolstart åk. 2: 16 augusti: TE kl. 13.00 & ES/EE kl. 14.00</p>
+                            <p>Skolstart åk. 3: 17 augusti: TE kl. 13.00 & ES/EE kl. 14.00</p>
+                            <p>Höstlov: 1 november – 5 november</p>
+                            <p>Jullov: 20 december – 6 januari</p>
+                        </div>
+                    </div>
+                    <div id="vårtermin">
+                        <div class="kort">
+                            <div class="mitten">
+                                <h3>Vårterminen 2022</h3>
+                            </div>
+                            <p>7 januari (Studiedag)</p>
+                            <p>10 januari enligt schema</p>
+                            <p>Sportlov: 28 februari – 4 mars</p>
+                            <p>Påsklov: 11 april – 18 april</p>
+                            <p>Lovdagar 26-27 maj</p>
+                            <p>Skolavslutning åk 1 & 2: 2 juni</p>
+                            <p>Student 2022: 3 juni</p>
+                        </div>
+                    </div>
                 </div>
                 <div id="information">
-                    <i class="fa-solid fa-info"></i>
-                    <h1>INFORMATION</h1>
-                    <i class="fas fa-bus-alt"></i>
-                    <h2>VIKTIG INFORMATION OM SL-KORT</h2>
-                    <ul>
-                        <dt>Det är viktigt att du registrerar kortet på sl.se så att du får förlustgaranti. Det innebär att om du förlorat och
-                        spärrat ditt kort hos SL, får du ett nytt kort hemskickat med samma innehåll som fanns när det spärrades. Skolan delar
-                        inte ut nya kort om du har tappat ditt kort.</dt>
-                        <li>Gör så här:</li>
-                        <li>1. Skapa ett konto på sl.se, om du inte redan har ett sedan tidigare</li>
-                        <li>2. Registrera det nya kortet på ditt konto. Har du redan registrerade kort på kontot, är det viktigt att du gör en ny
-                        registrering för detta kort.</li>
-                        <li>3. Färdigt! Nu har du förlustgaranti på alla biljetter som finns uppladdade på det registrerade kortet.
-                        Elever folkbokförda i Håbo Kommun får SL-kortet direkt från kommunen.</li>
-                    </ul>
-                    <i class="fa-solid fa-credit-card"></i>
-                    <h2>VIKTIGT GÄLLANDE LUNCHKORTEN!</h2>
-                    <ul>
-                        <li>Elevkortet gäller mellan kl 10.45 och 13.15.
-                        Om elevkortet inte fungerar, om du har glömt det hemma eller tappat bort det kan du äta lunch på La Grande.
-                        För att äta där krävs en kupong från skolan som hämtas hos Miriam på expeditionen.</li>
-                        <li>Kuponger är dock endast till för ENSTAKA tillfällen. Har du tappat ditt kort MÅSTE du beställa nytt omgående!
-                        Om ditt kort inte fungerar ringer du 08-681 81 30.</li>
-                        <li>Om du har tappat bort ditt kort beställer du ett nytt i expeditionen. Kortet kostar 250 kr.</li>
-                    </ul>
+                    <div class="sl">
+                        <h2>VIKTIG INFORMATION OM SL-KORT</h2>
+                        <ul>
+                            <dt>Det är viktigt att du registrerar kortet på sl.se så att du får förlustgaranti. Det innebär att om du förlorat och
+                            spärrat ditt kort hos SL, får du ett nytt kort hemskickat med samma innehåll som fanns när det spärrades. Skolan delar
+                            inte ut nya kort om du har tappat ditt kort.</dt>
+                            <div class="rad">
+                                <li style="left: 0; position: absolute;">Gör så här:</li>
+                                <img src="pil.png" alt="pil" style="width: 5vw; transform: rotate(-90deg);" id="slpil">   
+                            </div>
+                            <div id="tutorial">
+                                <li>1. Skapa ett konto på sl.se, om du inte redan har ett sedan tidigare</li>
+                                <li>2. Registrera det nya kortet på ditt konto. Har du redan registrerade kort på kontot, är det viktigt att du gör en ny
+                                registrering för detta kort.</li>
+                                <li>3. Färdigt! Nu har du förlustgaranti på alla biljetter som finns uppladdade på det registrerade kortet.
+                                Elever folkbokförda i Håbo Kommun får SL-kortet direkt från kommunen.</li>
+                            </div>   
+                        </ul>
+                    </div>
+                    <div class="matkort">
+                        <h2>VIKTIGT GÄLLANDE LUNCHKORTEN!</h2>
+                        <ul>
+                            <li>Elevkortet gäller mellan kl 10.45 och 13.15.
+                            Om elevkortet inte fungerar, om du har glömt det hemma eller tappat bort det kan du äta lunch på La Grande.
+                            För att äta där krävs en kupong från skolan som hämtas hos Miriam på expeditionen.</li>
+                            <li>Kuponger är dock endast till för ENSTAKA tillfällen. Har du tappat ditt kort MÅSTE du beställa nytt omgående!
+                            Om ditt kort inte fungerar ringer du 08-681 81 30.</li>
+                            <li>Om du har tappat bort ditt kort beställer du ett nytt i expeditionen. Kortet kostar 250 kr.</li>
+                        </ul>
+                    </div>
                 </div>
                 <div id="elevhälsa">
                     <h1>Hälsa type beat</h1>
