@@ -212,13 +212,16 @@ footer img {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#hösttermin {
+#höstBakgrund {
   background-image: url("Images/höst.png");
 }
-
-#datum li,
-#datum dt {
-  margin-left: 5vw;
+#hösttermin {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.753);
+  padding: 2vh;
 }
 #datum {
   padding-top: 0%;
@@ -278,7 +281,6 @@ footer img {
 #elevhälsa ul,
 #information ul {
   list-style-type: none;
-  padding-top: 3%;
 }
 
 #elevhälsa li,
@@ -333,13 +335,72 @@ footer img {
 .knappvänster {
   grid-column: 1/1;
 }
+
+#minProfil {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+}
 .profilBild {
-  width: 30vw;
+  width: 25vw;
   display: flex;
   margin-left: 4vw;
   flex-direction: column;
   font-family: Lato, sans-serif;
 }
+
+.profilInfo {
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2px rgb(121, 114, 114) solid;
+  border-right: 2px rgb(121, 114, 114) solid;
+}
+
+.profilListaRubrik {
+  background-color: rgba(95, 86, 86, 0.699);
+  width: 45vw;
+  padding-bottom: 4vh;
+  padding-top: 4vh;
+  margin-bottom: 8vh;
+}
+
+.profilListaRubrik h1 {
+  font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 3vh;
+}
+
+.profilLista ul li {
+  margin-bottom: 2vh;
+  list-style-type: none;
+  font-family: Lato, sans-serif;
+}
+
+.profilLista div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30vw;
+  background-color: rgba(241, 237, 237, 0.651);
+  padding: 1vh;
+}
+
+.profilLista h1 {
+  font-size: 1, 7vh;
+}
+.profilLista h2 {
+  font-size: 1, 7vh;
+  justify-content: flex-end;
+}
+
+.profil .profilInst {
+  width: 20vw;
+}
+
 .chad {
   margin-top: 7vh;
   max-height: 25vh;
