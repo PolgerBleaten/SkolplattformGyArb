@@ -12,10 +12,13 @@ let hälsavänster = document.querySelector("[data-hälsavänster]");
 let hälsinfo = [document.getElementById("hälsinfo1"), document.getElementById("hälsinfo2"), document.getElementById("hälsinfo3"), document.getElementById("hälsinfo4")]
 let slinfo = document.getElementById("tutorial");
 let slpil = document.getElementById("slpil");
+let darkmodebutton = document.getElementById("darkmode");
+let darkmodeimage = document.getElementById("darkmodeimage");
 var h;
 var e;
 var f;
 var t;
+var darkmodeactive = false;
 const firstDate = new Date();
 const secondDate = new Date(Date.now() + 1000000000);
 const calendar = new dhx.Calendar("kalender", {
@@ -41,6 +44,7 @@ info.addEventListener("click", GömNav);
 profil.addEventListener("click", GömNav);
 
 slpil.addEventListener("click", VisaSl)
+darkmodebutton.addEventListener("click", changelight);
 
 links.forEach((link) => {
     link.addEventListener("click", (event) => {
@@ -62,8 +66,21 @@ function VisaSl() {
     }
 }
 
+function changelight() {
+    if(darkmodeactive){
+        lightmode();
+    }
+    else{
+        darkmode();
+    }
+}
 
 function darkmode() {
+    darkmodeactive = true;
+    darkmodeimage.src = "Images/lightmode.png";
+    document.querySelectorAll("div.genomskinligBakgrund div").forEach(element => {
+        element.style.backgroundColor = "rgba(80, 80, 80, 0.692)";
+    });
     document.getElementById("skolInfo").classList.add("skolinfo2");
     document.getElementById("skolInfo").classList.remove("skolinfo");
     document.querySelector("main").classList.add("svartbakgrund");
@@ -79,8 +96,23 @@ function darkmode() {
 }
 
 function lightmode() {
+    darkmodeactive = false;
+    document.querySelectorAll("div.genomskinligBakgrund div").forEach(element => {
+        element.style.backgroundColor = "rgba(223, 219, 219, 0.692)";
+    });
     document.getElementById("skolInfo").classList.add("skolinfo");
     document.getElementById("skolInfo").classList.remove("skolinfo2");
+    darkmodeimage.src = "Images/halvmåne.png";
+    document.querySelector("main").classList.remove("svartbakgrund");
+    document.getElementById("matkort").classList.remove("matkort2");
+    document.getElementById("matkort").classList.add("matkort")
+    for(const t of document.getElementsByClassName("kort")) {
+        t.style.filter = "none"
+        t.style.color = "none"
+        if(t == document.getElementsByClassName("kort")[2]){
+            t.style.color = "black"
+        }
+    }
 }
 
 function Bläddravänster(){
