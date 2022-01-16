@@ -25,6 +25,9 @@
             <a href="" data-start data-linked-article="startSida">Startsida</a>
             <a href="" data-info data-linked-article="skolInfo">Skolinfo</a>
             <a href="" data-profil data-linked-article="minProfil">Min profil</a>
+            <button id="darkmode">
+                <img src="/Images/halvmåne.png" alt="darkmode">
+            </button>
         </container>       
     </header>
     <main>
@@ -94,7 +97,7 @@
                 </div>
             </section>
         </article>
-        <article id="skolInfo" class="hidden">
+        <article id="skolInfo" class="hidden skolinfo">
                 <div id="datum">
                     <div id="datumintro">
                         <h1>LÄSÅRSDATUM 2021/2022</h1>
@@ -148,7 +151,7 @@
                             Elever folkbokförda i Håbo Kommun får SL-kortet direkt från kommunen.</p>
                         </div>
                     </div>
-                    <div class="matkort">
+                    <div class="matkort" id="matkort">
                         <h2>Information angående lunchkorten</h2>
                         <div id="matkortinfo">
                             <div>
@@ -202,10 +205,11 @@
                 </div>
                 <div id="rökning">
                     <h2>Rökning</h2>
-                    <p>Det är inte tillåtet att röka vid bänkarna eller på någon annan plats i anslutning till entrén. Det enda stället där det är tillåtet är vid askkoppen runt hörnet.</p>
-                    <p>Du kommer att få en muntlig varning om du inte följer regeln. Ser personalen att du röker på fel plats kommer du behöva följa med till skolledningen. Att röka på en skolgård är ett brott mot tobakslagen 1993:581 2§.</p>
+                    <h5 id="rökningsinfo1">Det är inte tillåtet att röka vid bänkarna eller på någon annan plats i anslutning till entrén. Det enda stället där det är tillåtet är vid askkoppen runt hörnet.</h5>
+                    <h5 id="rökningsinfo2">Du kommer att få en muntlig varning om du inte följer regeln. Ser personalen att du röker på fel plats kommer du behöva följa med till skolledningen. Att röka på en skolgård är ett brott mot tobakslagen 1993:581 2§.</h5>
+                    <img src="/Images/rökning.png" alt="rökning">
                 </div>
-                <div id="Frukost">
+                <div id="frukost">
                     <h2>Frukost</h2>
                     <p>Här på NTI serveras frukost till de elever som önskar.
                         Mån-fre 7.50-8.10</p>

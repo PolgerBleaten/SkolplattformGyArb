@@ -27,6 +27,7 @@ hälsinfo[3].style.display = "none";
 console.log(articles);
 var sidebar = document.getElementById("sidebar");
 
+
 Bläddravänster();
 right.addEventListener("click", Bläddrahöger)
 hälsavänster.addEventListener("click", Bläddravänster)
@@ -45,7 +46,7 @@ links.forEach((link) => {
     link.addEventListener("click", (event) => {
         event.preventDefault();
         articles.forEach((article) => article.classList.add("hidden"));
-        document.querySelector("#" + link.getAttribute("data-linked-article")).classList.remove("hidden");    
+        document.querySelector("#" + link.getAttribute("data-linked-article")).classList.remove("hidden");
     });
 });
 
@@ -59,6 +60,27 @@ function VisaSl() {
         slpil.style.transform = "rotate(-90deg)";
         slinfo.style.display = "none";
     }
+}
+
+
+function darkmode() {
+    document.getElementById("skolInfo").classList.add("skolinfo2");
+    document.getElementById("skolInfo").classList.remove("skolinfo");
+    document.querySelector("main").classList.add("svartbakgrund");
+    document.getElementById("matkort").classList.add("matkort2");
+    document.getElementById("matkort").classList.remove("matkort")
+    for(const t of document.getElementsByClassName("kort")) {
+        t.style.filter = "brightness(60%)"
+        t.style.color = "black"
+        if(t == document.getElementsByClassName("kort")[2]){
+            t.style.color = "white"
+        }
+    }
+}
+
+function lightmode() {
+    document.getElementById("skolInfo").classList.add("skolinfo");
+    document.getElementById("skolInfo").classList.remove("skolinfo2");
 }
 
 function Bläddravänster(){
