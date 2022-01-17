@@ -22,6 +22,10 @@ header {
   background-image: -webkit-linear-gradient(left, #ab058b 0, indigo 100%);
 }
 
+.budgetborder {
+  border: black solid 1px;
+}
+
 .HeaderBackground {
   height: 12vh;
   width: 100vw;
@@ -83,6 +87,17 @@ h5 {
 main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+#sidebar a {
+  padding-top: 3vh;
+  text-decoration: none;
+  color: rgb(27, 59, 199);
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -627,4 +642,102 @@ input[type="text"]:focus {
 
 #darkmode img {
   width: 100%;
+}
+
+#ämnen h4 {
+  font-size: 1.3vw;
+  background-color: rgba(223, 219, 219, 0.692);
+  padding: 0.3vw;
+}
+
+#ämnen {
+  display: grid;
+  grid-template-rows: 7vh 1fr;
+}
+#ämnenheader {
+  display: grid;
+  grid-template-columns: 1fr 20vw;
+}
+#ämnenmain {
+  display: grid;
+  grid-template-rows: 1fr 1.3fr;
+}
+#ämnenrad1,
+#ämnenrad2 {
+  display: grid;
+  grid-template-columns: 1fr 30vw;
+  grid-row: 1;
+}
+#ämnenrad2 {
+  grid-row: 2;
+}
+
+#uppgifter,
+#lärare {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 5vh 1fr;
+}
+
+#uppgifter img,
+.resultat img {
+  width: 5vw;
+  padding-top: 1vh;
+  padding-right: 1vw;
+}
+
+#uppgifter p,
+.resultat p {
+  font-size: 1vw;
+  padding-top: 2vh;
+}
+#uppgifter strong,
+.resultat strong {
+  font-size: 1.2vw;
+}
+
+#ämnen h4 {
+  grid-column: 1/4;
+}
+
+.uppgift {
+  grid-row: 2;
+  border-left: blue 10px solid;
+}
+
+#lärare p {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+#lärare p strong {
+  margin-right: 2vw;
+  margin-left: 0.3vw;
+}
+#kursmatris {
+  cursor: zoom-in;
+}
+
+#resultat {
+  display: flex;
+  flex-direction: column;
+}
+.resultat,
+.uppgift {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0px 15px 15px 0px;
+  margin-left: 1vw;
+  margin-bottom: 0.5vw;
+  margin-top: 0.5vw;
+}
+.resultat {
+  border: 1px black solid;
+  border-left: green 10px solid;
+  grid-column: 1;
+}
+.resultatgrid {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
 }
