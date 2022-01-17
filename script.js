@@ -78,7 +78,7 @@ function changelight() {
 function darkmode() {
     darkmodeactive = true;
     darkmodeimage.src = "Images/lightmode.png";
-    document.querySelectorAll("div.genomskinligBakgrund div").forEach(element => {
+    document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4").forEach(element => {
         element.style.backgroundColor = "rgba(80, 80, 80, 0.692)";
     });
     document.getElementById("skolInfo").classList.add("skolinfo2");
@@ -97,7 +97,7 @@ function darkmode() {
 
 function lightmode() {
     darkmodeactive = false;
-    document.querySelectorAll("div.genomskinligBakgrund div").forEach(element => {
+    document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4").forEach(element => {
         element.style.backgroundColor = "rgba(223, 219, 219, 0.692)";
     });
     document.getElementById("skolInfo").classList.add("skolinfo");
@@ -175,7 +175,7 @@ function GömNav(){
     sidebar.style.display = "none";
 }
 function VisaNav(){
-    sidebar.style.display = "initial"
+    sidebar.style.display = "flex";
 }
 function Idag(){
     RemoveColorOfButtons();
