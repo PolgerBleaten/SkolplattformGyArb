@@ -636,7 +636,7 @@ input[type="text"]:focus {
   align-items: center;
   justify-content: flex-start;
   grid-row: 5;
-  padding-top: 10vh;
+  padding-top: 20vh;
 }
 
 #darkmode {
