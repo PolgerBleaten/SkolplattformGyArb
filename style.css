@@ -215,9 +215,9 @@ footer img {
   grid-column: 1/4;
   font-family: Lato, sans-serif;
   width: 100%;
-  height: 400vh;
+  height: 360vh;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 20vh;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .skolinfo {
@@ -631,7 +631,12 @@ input[type="text"]:focus {
   padding-top: 2%;
 }
 #frukost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   grid-row: 5;
+  padding-top: 10vh;
 }
 
 #darkmode {
