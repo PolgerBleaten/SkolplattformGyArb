@@ -741,3 +741,45 @@ input[type="text"]:focus {
   display: grid;
   grid-template-columns: 1fr 0.5fr;
 }
+#studieplan {
+  height: 200vh;
+  display: grid;
+  grid-template-rows: 10vh auto;
+  width: 60vw;
+  margin-top: 2vh;
+}
+.kurser {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1vw;
+  font-family: sans-serif;
+  min-width: 10vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.kurser thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+.kurser th,
+.kurser td {
+  padding: 12px 15px;
+}
+.kurser tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+.kurser tbody tr:nth-last-of-type(even) {
+  background-color: #f3f3f3;
+}
+.kurser tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+#sökning {
+  width: 40vw;
+  height: 5vh;
+  border-radius: 10px;
+}
+
+.Visa {
+  cursor: pointer;
+}

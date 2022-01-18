@@ -30,6 +30,7 @@ hälsinfo[3].style.display = "none";
 console.log(articles);
 var sidebar = document.getElementById("sidebar");
 
+Betyg();
 
 Bläddravänster();
 right.addEventListener("click", Bläddrahöger)
@@ -66,6 +67,32 @@ function VisaSl() {
     }
 }
 
+function Betyg() {
+    document.querySelectorAll("td").forEach(element =>{
+        if (element.innerHTML == "F") {
+            element.style.color = "crimson"            
+        }
+        else if (element.innerHTML == "E") {
+            element.style.color = "lightcoral"            
+        }
+        else if (element.innerHTML == "D") {
+            element.style.color = "orange"            
+        }
+        else if (element.innerHTML == "C") {
+            element.style.color = "yellowgreen"            
+        }
+        else if (element.innerHTML == "B") {
+            element.style.color = "lawngreen"            
+        }
+        else if (element.innerHTML == "A") {
+            element.style.color = "limegreen"            
+        }
+        else if (element.innerHTML == "Visa"){
+            element.classList.add("Visa");
+        }
+    })
+}
+
 function changelight() {
     if(darkmodeactive){
         lightmode();
@@ -78,7 +105,7 @@ function changelight() {
 function darkmode() {
     darkmodeactive = true;
     darkmodeimage.src = "Images/lightmode.png";
-    document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4").forEach(element => {
+    document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4, .kurser tbody tr:nth-last-of-type(even)").forEach(element => {
         element.style.backgroundColor = "rgba(80, 80, 80, 0.692)";
     });
     document.getElementById("skolInfo").classList.add("skolinfo2");
@@ -97,7 +124,7 @@ function darkmode() {
 
 function lightmode() {
     darkmodeactive = false;
-    document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4").forEach(element => {
+    document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4, .kurser tbody tr:nth-last-of-type(even)").forEach(element => {
         element.style.backgroundColor = "rgba(223, 219, 219, 0.692)";
     });
     document.getElementById("skolInfo").classList.add("skolinfo");
