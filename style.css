@@ -116,6 +116,7 @@ article {
 
 #startSida {
   display: flex;
+  width: 70vw;
 }
 
 h3 {
@@ -132,6 +133,7 @@ h4 {
   width: 35vw;
   display: grid;
   grid-template-rows: 9vw 30vw;
+  overflow: auto;
 }
 
 .schemanav {
@@ -151,17 +153,6 @@ h4 {
 
 .annat {
   width: 40vw;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-}
-
-.annat div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3vh;
-  border: 0.2vh solid black;
 }
 
 .hidden {
@@ -197,6 +188,7 @@ footer img {
   justify-content: center;
   align-items: center;
 }
+
 #lektioner div:first-of-type {
   border-left: solid 5px green;
   border-top-right-radius: 10px;
@@ -753,6 +745,39 @@ input[type="text"]:focus {
   width: 60vw;
   margin-top: 2vh;
 }
+
+.nyheter {
+  border-collapse: collapse;
+  margin: 2vw 0;
+  font-size: 1vw;
+  font-family: sans-serif;
+  box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+.titel {
+  font-weight: bold;
+}
+
+.nyheter thead tr {
+  background-color: royalblue;
+  color: #ffffff;
+  text-align: left;
+}
+
+.nyheter th,
+.nyheter td {
+  padding: 1vw 1.2vw;
+}
+
+.nyheter tbody tr {
+  border-bottom: 1px solid #003d98;
+}
+
+.nyheter tbody tr:nth-last-of-type(even) {
+  background-color: aqua;
+}
+
 .kurser {
   border-collapse: collapse;
   margin: 25px 0;
