@@ -138,7 +138,7 @@ h4 {
 
 .schemanav {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .schemanav button {
@@ -148,11 +148,23 @@ h4 {
 }
 
 #idag {
-  background-color: green;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(15, 168, 153, 1) 0%,
+    rgba(61, 255, 0, 1) 100%
+  );
+}
+#idag,
+#månad {
+  border-radius: 1vw;
+  border: solid navy 0.1vw;
+  cursor: pointer;
 }
 
 .annat {
-  width: 40vw;
+  width: 45vw;
 }
 
 .hidden {
@@ -775,7 +787,7 @@ input[type="text"]:focus {
 }
 
 .nyheter tbody tr:nth-last-of-type(even) {
-  background-color: aqua;
+  background-color: #f3f3f3;
 }
 
 .kurser {
