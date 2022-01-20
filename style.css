@@ -225,16 +225,7 @@ footer img {
 }
 
 .skolinfo {
-  background: -webkit-linear-gradient(
-    to right,
-    #ffffff,
-    #2193b0
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    #2193b0
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #cc95c0, #dbd4b4, #7aa1d2);
 }
 
 .svartbakgrund {
@@ -243,16 +234,13 @@ footer img {
 }
 
 .skolinfo2 {
-  background: -webkit-linear-gradient(
-    to right,
-    #000000,
-    #2193b0
-  ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to right,
-    #000000,
-    #2193b0
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    90deg,
+    rgba(121, 88, 114, 1) 0%,
+    rgba(116, 113, 97, 1) 50%,
+    rgba(68, 88, 113, 1) 100%
+  );
+
   backdrop-filter: brightness(60%);
 }
 
@@ -414,7 +402,7 @@ footer img {
 #minProfil {
   display: grid;
   height: 90vh;
-  grid-template-columns: 27.93vw 40vw 31vw;
+  grid-template-columns: 27.6vw 40vw 31vw;
 }
 .profilBild {
   grid-column: 1;

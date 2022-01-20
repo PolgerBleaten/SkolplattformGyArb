@@ -18,6 +18,7 @@ var e;
 var f;
 var t;
 var darkmodeactive = false;
+var idagaktiv = true;
 const firstDate = new Date();
 const secondDate = new Date(Date.now() + 1000000000);
 const calendar = new dhx.Calendar("kalender", {
@@ -102,10 +103,21 @@ function changelight() {
 
 function darkmode() {
     darkmodeactive = true;
+    document.querySelectorAll("button").forEach(element =>{
+        element.style.color = "rgb(199, 175, 175)";
+    });
     darkmodeimage.src = "Images/lightmode.png";
     document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4, .kurser tbody tr:nth-last-of-type(even), .nyheter tbody tr:nth-last-of-type(even)").forEach(element => {
         element.style.backgroundColor = "rgba(80, 80, 80, 0.692)";
     });
+    if(idagaktiv){
+        document.getElementById("idag").style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
+        document.getElementById("månad").style.background = "rgb(56, 56, 56)";
+    }
+    else{
+        document.getElementById("månad").style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
+        document.getElementById("idag").style.background = "rgb(56, 56, 56)";
+    }
     document.getElementById("skolInfo").classList.add("skolinfo2");
     document.getElementById("skolInfo").classList.remove("skolinfo");
     document.querySelector("main").classList.add("svartbakgrund");
@@ -125,6 +137,15 @@ function lightmode() {
     document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4, .kurser tbody tr:nth-last-of-type(even), .nyheter tbody tr:nth-last-of-type(even)").forEach(element => {
         element.style.backgroundColor = "rgba(223, 219, 219, 0.692)";
     });
+    document.querySelectorAll("button").forEach(element =>{
+        element.style.color = "black";
+    });
+    if (idagaktiv) {
+        document.getElementById("månad").style.background = "white";
+    }
+    else{
+        document.getElementById("idag").style.background = "white";
+    }
     document.getElementById("skolInfo").classList.add("skolinfo");
     document.getElementById("skolInfo").classList.remove("skolinfo2");
     darkmodeimage.src = "Images/halvmåne.png";
@@ -192,8 +213,14 @@ function Gömschema(){
     document.getElementById("lektioner").classList.add("hidden");
 }
 function RemoveColorOfButtons(){
-    document.getElementById("idag").style.background = "white";
-    document.getElementById("månad").style.background = "white";
+    if (!darkmodeactive) {
+        document.getElementById("idag").style.background = "white";
+        document.getElementById("månad").style.background = "white";
+    }
+    else{
+        document.getElementById("idag").style.background = "rgb(56, 56, 56)";
+        document.getElementById("månad").style.background = "rgb(56, 56, 56)";
+    }
 }
 function GömNav(){
     sidebar.style.display = "none";
@@ -202,16 +229,28 @@ function VisaNav(){
     sidebar.style.display = "flex";
 }
 function Idag(){
+    idagaktiv = true;
     RemoveColorOfButtons();
     Gömkalender();
     Visaschema();
-    document.getElementById("idag").style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+    if (darkmode) {
+        document.getElementById("idag").style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
+    }
+    else{
+        document.getElementById("idag").style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+    }
 }
 
 
 function Månad(){
+    idagaktiv = false;
     RemoveColorOfButtons();
     Gömschema();
     Visakalender();
-    document.getElementById("månad").style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+    if (darkmode) {
+        document.getElementById("månad").style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
+    }
+    else{
+        document.getElementById("månad").style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+    }
 }
