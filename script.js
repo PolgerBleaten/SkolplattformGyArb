@@ -107,7 +107,7 @@ function darkmode() {
         element.style.color = "rgb(199, 175, 175)";
     });
     darkmodeimage.src = "Images/lightmode.png";
-    document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4, .kurser tbody tr:nth-last-of-type(even), .nyheter tbody tr:nth-last-of-type(even)").forEach(element => {
+    document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4, .kurser tbody tr:nth-last-of-type(even), .nyheter tbody tr:nth-last-of-type(even), #sidebar").forEach(element => {
         element.style.backgroundColor = "rgba(80, 80, 80, 0.692)";
     });
     if(idagaktiv){
@@ -134,7 +134,7 @@ function darkmode() {
 
 function lightmode() {
     darkmodeactive = false;
-    document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4, .kurser tbody tr:nth-last-of-type(even), .nyheter tbody tr:nth-last-of-type(even)").forEach(element => {
+    document.querySelectorAll("div.genomskinligBakgrund div, #ämnen h4, .kurser tbody tr:nth-last-of-type(even), .nyheter tbody tr:nth-last-of-type(even), #sidebar").forEach(element => {
         element.style.backgroundColor = "rgba(223, 219, 219, 0.692)";
     });
     document.querySelectorAll("button").forEach(element =>{
