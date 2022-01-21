@@ -141,9 +141,11 @@ function lightmode() {
         element.style.color = "black";
     });
     if (idagaktiv) {
+        document.getElementById("idag").style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
         document.getElementById("månad").style.background = "white";
     }
     else{
+        document.getElementById("månad").style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
         document.getElementById("idag").style.background = "white";
     }
     document.getElementById("skolInfo").classList.add("skolinfo");
@@ -233,7 +235,7 @@ function Idag(){
     RemoveColorOfButtons();
     Gömkalender();
     Visaschema();
-    if (darkmode) {
+    if (darkmodeactive) {
         document.getElementById("idag").style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
     }
     else{
@@ -247,7 +249,7 @@ function Månad(){
     RemoveColorOfButtons();
     Gömschema();
     Visakalender();
-    if (darkmode) {
+    if (darkmodeactive) {
         document.getElementById("månad").style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
     }
     else{
