@@ -141,19 +141,13 @@ h4 {
 }
 
 .schemanav button {
-  margin: 2vw;
-  margin-top: 1vw;
+  margin: 1vw;
   border: none;
 }
 
 #idag {
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(15, 168, 153, 1) 0%,
-    rgba(61, 255, 0, 1) 100%
-  );
+  background: linear-gradient(to right, #2b5876, #4e4376);
 }
 #idag,
 #månad,
@@ -840,8 +834,7 @@ input[type="text"]:focus {
   text-decoration: none;
   background: linear-gradient(to right, #2b5876, #4e4376);
 }
-.ämnen,
-.ämnen2 {
+.ämnen {
   margin: 0.5vw;
   padding: 0.5vw 1.5vw;
   text-align: center;
@@ -852,19 +845,8 @@ input[type="text"]:focus {
   display: block;
 }
 
-.ämnen:hover,
-.ämnen2:hover {
+.ämnen:hover {
   background-position: right center;
   color: #fff;
   text-decoration: none;
-}
-
-.ämnen2 {
-  text-decoration: none;
-  background-image: linear-gradient(
-    to right,
-    #dc2424 0%,
-    #4a569d 51%,
-    #dc2424 100%
-  );
 }

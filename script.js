@@ -119,17 +119,14 @@ function darkmode() {
         element.style.backgroundColor = "rgba(80, 80, 80, 0.692)";
     });
     if(idagaktiv){
-        idag.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
         månad.style.background = "rgb(56, 56, 56)";
-        månad.style.background = "rgb(56, 56, 56)";
+        vecka.style.background = "rgb(56, 56, 56)";
     }
     else if(veckaaktiv){
-        vecka.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
         idag.style.background = "rgb(56, 56, 56)";
         månad.style.background = "rgb(56, 56, 56)";
     }
     else{
-        månad.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
         idag.style.background = "rgb(56, 56, 56)";
         vecka.style.background = "rgb(56, 56, 56)";
     }
@@ -156,17 +153,17 @@ function lightmode() {
         element.style.color = "black";
     });
     if (idagaktiv) {
-        idag.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+        idag.style.background = "linear-gradient(to right, #2b5876, #4e4376)";
         månad.style.background = "white";
         vecka.style.background = "white";
     }
     else if(veckaaktiv){
-        vecka.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+        vecka.style.background = "linear-gradient(to right, #2b5876, #4e4376)";
         månad.style.background = "white";
         idag.style.background = "white";
     }
     else{
-        månad.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+        månad.style.background = "linear-gradient(to right, #2b5876, #4e4376)";
         idag.style.background = "white";
         vecka.style.background = "white";
     }
@@ -269,12 +266,7 @@ function Idag(){
     Gömkalender();
     Gömvecka();
     Visaschema();
-    if (darkmodeactive) {
-        idag.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
-    }
-    else{
-        idag.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
-    }
+    idag.style.background = "linear-gradient(to right, #2b5876, #4e4376)";
 }
 
 function Vecka() {
@@ -285,12 +277,7 @@ function Vecka() {
     Gömkalender();
     Gömschema();
     Visavecka();
-    if (darkmodeactive) {
-        vecka.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
-    }
-    else{
-        vecka.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
-    }
+    vecka.style.background = "linear-gradient(to right, #2b5876, #4e4376)";
 }
 
 function Månad(){
@@ -301,10 +288,8 @@ function Månad(){
     Gömschema();
     Gömvecka();
     Visakalender();
-    if (darkmodeactive) {
-        månad.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
-    }
-    else{
-        månad.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
-    }
+    månad.style.background = "linear-gradient(to right, #2b5876, #4e4376)";
+}
+function Free(knapp) {
+    knapp.style.color = "rgb(199,175,175)"
 }
