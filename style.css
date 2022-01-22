@@ -100,6 +100,7 @@ nav {
   width: 20vw;
   height: 65vh;
   padding-left: 5vw;
+  padding-right: 2vw;
 }
 nav h4,
 h3 {
@@ -130,13 +131,13 @@ h4 {
   margin-right: 1vw;
   width: 35vw;
   display: grid;
-  grid-template-rows: 9vw 30vw;
+  grid-template-rows: 5vw 30vw;
   overflow: auto;
 }
 
 .schemanav {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .schemanav button {
@@ -155,8 +156,9 @@ h4 {
   );
 }
 #idag,
-#månad {
-  border-radius: 1vw;
+#månad,
+#vecka {
+  border-radius: 0.5vw;
   border: solid navy 0.1vw;
   cursor: pointer;
 }
@@ -199,6 +201,27 @@ footer img {
   align-items: center;
 }
 
+#veckaschema {
+  display: flex;
+  flex-direction: column;
+}
+#veckaschema .dag:nth-last-of-type(even) {
+  background-color: #f3f3f3;
+}
+.dag,
+.sammanfattning {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 1vh;
+}
+.sammanfattning {
+  border-top: royalblue 5px solid;
+}
+.sammanfattning p {
+  cursor: pointer;
+}
+.dag div {
+}
 #lektioner div:first-of-type {
   border-left: solid 5px green;
   border-top-right-radius: 10px;
@@ -648,6 +671,7 @@ input[type="text"]:focus {
 #ämnen {
   display: grid;
   grid-template-rows: 7vh 1fr;
+  width: 70vw;
 }
 #ämnenheader {
   display: grid;
@@ -814,12 +838,7 @@ input[type="text"]:focus {
 
 .ämnen {
   text-decoration: none;
-  background-image: linear-gradient(
-    to right,
-    #da22ff 0%,
-    #9733ee 51%,
-    #da22ff 100%
-  );
+  background: linear-gradient(to right, #2b5876, #4e4376);
 }
 .ämnen,
 .ämnen2 {
@@ -829,7 +848,6 @@ input[type="text"]:focus {
   text-transform: uppercase;
   transition: 0.5s;
   color: white;
-  box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
 }

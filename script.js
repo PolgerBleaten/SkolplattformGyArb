@@ -1,6 +1,7 @@
 'use strict';
 let idag = document.querySelector("[data-idag]");
 let månad = document.querySelector("[data-månad]");
+let vecka = document.querySelector("[data-vecka]");
 let links = document.querySelectorAll("a");
 let articles = document.querySelectorAll("article");
 let start = document.querySelector("[data-start]");
@@ -13,12 +14,17 @@ let slinfo = document.getElementById("tutorial");
 let slpil = document.getElementById("slpil");
 let darkmodebutton = document.getElementById("darkmode");
 let darkmodeimage = document.getElementById("darkmodeimage");
+let kalender = document.getElementById("kalender");
+let lektioner = document.getElementById("lektioner");
+let veckaschema = document.getElementById("veckaschema");
 var h;
 var e;
 var f;
 var t;
 var darkmodeactive = false;
 var idagaktiv = true;
+var månadaktiv = false;
+var veckaaktiv = false;
 const firstDate = new Date();
 const secondDate = new Date(Date.now() + 1000000000);
 const calendar = new dhx.Calendar("kalender", {
@@ -26,6 +32,7 @@ const calendar = new dhx.Calendar("kalender", {
     value: [firstDate, secondDate]
 });
 Gömkalender();
+Gömvecka();
 hälsinfo[3].style.display = "none";
 console.log(articles);
 var sidebar = document.getElementById("sidebar");
@@ -36,6 +43,7 @@ Bläddravänster();
 right.addEventListener("click", Bläddrahöger)
 hälsavänster.addEventListener("click", Bläddravänster)
 
+vecka.addEventListener("click", Vecka);
 idag.addEventListener("click", Idag);
 månad.addEventListener("click", Månad);
 
@@ -111,12 +119,19 @@ function darkmode() {
         element.style.backgroundColor = "rgba(80, 80, 80, 0.692)";
     });
     if(idagaktiv){
-        document.getElementById("idag").style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
-        document.getElementById("månad").style.background = "rgb(56, 56, 56)";
+        idag.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
+        månad.style.background = "rgb(56, 56, 56)";
+        månad.style.background = "rgb(56, 56, 56)";
+    }
+    else if(veckaaktiv){
+        vecka.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
+        idag.style.background = "rgb(56, 56, 56)";
+        månad.style.background = "rgb(56, 56, 56)";
     }
     else{
-        document.getElementById("månad").style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
-        document.getElementById("idag").style.background = "rgb(56, 56, 56)";
+        månad.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
+        idag.style.background = "rgb(56, 56, 56)";
+        vecka.style.background = "rgb(56, 56, 56)";
     }
     document.getElementById("skolInfo").classList.add("skolinfo2");
     document.getElementById("skolInfo").classList.remove("skolinfo");
@@ -141,12 +156,19 @@ function lightmode() {
         element.style.color = "black";
     });
     if (idagaktiv) {
-        document.getElementById("idag").style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
-        document.getElementById("månad").style.background = "white";
+        idag.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+        månad.style.background = "white";
+        vecka.style.background = "white";
+    }
+    else if(veckaaktiv){
+        vecka.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+        månad.style.background = "white";
+        idag.style.background = "white";
     }
     else{
-        document.getElementById("månad").style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
-        document.getElementById("idag").style.background = "white";
+        månad.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+        idag.style.background = "white";
+        vecka.style.background = "white";
     }
     document.getElementById("skolInfo").classList.add("skolinfo");
     document.getElementById("skolInfo").classList.remove("skolinfo2");
@@ -199,29 +221,38 @@ function Bläddrahöger(){
     hälsinfo[3].style.display = "none";
 }
 
+function Gömvecka() {
+    veckaschema.classList.add("hidden");
+}
+function  Visavecka() {
+    veckaschema.classList.remove("hidden");
+}
+
 function Gömkalender(){
-    document.getElementById("kalender").classList.add("hidden");
+    kalender.classList.add("hidden");
 }
 
 function Visakalender(){
-    document.getElementById("kalender").classList.remove("hidden");
+    kalender.classList.remove("hidden");
 }
 
 function Visaschema(){
-    document.getElementById("lektioner").classList.remove("hidden");
+    lektioner.classList.remove("hidden");
 }
 
 function Gömschema(){
-    document.getElementById("lektioner").classList.add("hidden");
+    lektioner.classList.add("hidden");
 }
 function RemoveColorOfButtons(){
     if (!darkmodeactive) {
-        document.getElementById("idag").style.background = "white";
-        document.getElementById("månad").style.background = "white";
+        idag.style.background = "white";
+        månad.style.background = "white";
+        vecka.style.background = "white";
     }
     else{
-        document.getElementById("idag").style.background = "rgb(56, 56, 56)";
-        document.getElementById("månad").style.background = "rgb(56, 56, 56)";
+        idag.style.background = "rgb(56, 56, 56)";
+        månad.style.background = "rgb(56, 56, 56)";
+        vecka.style.background = "rgb(56, 56, 56)";
     }
 }
 function GömNav(){
@@ -232,27 +263,48 @@ function VisaNav(){
 }
 function Idag(){
     idagaktiv = true;
+    veckaaktiv = false;
+    månadaktiv = false;
     RemoveColorOfButtons();
     Gömkalender();
+    Gömvecka();
     Visaschema();
     if (darkmodeactive) {
-        document.getElementById("idag").style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
+        idag.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
     }
     else{
-        document.getElementById("idag").style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+        idag.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
     }
 }
 
+function Vecka() {
+    idagaktiv = false;
+    veckaaktiv = true;
+    månadaktiv = false;    
+    RemoveColorOfButtons();
+    Gömkalender();
+    Gömschema();
+    Visavecka();
+    if (darkmodeactive) {
+        vecka.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
+    }
+    else{
+        vecka.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+    }
+}
 
 function Månad(){
     idagaktiv = false;
+    veckaaktiv = false;
+    månadaktiv = true;
     RemoveColorOfButtons();
     Gömschema();
+    Gömvecka();
     Visakalender();
     if (darkmodeactive) {
-        document.getElementById("månad").style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
+        månad.style.background = "linear-gradient(90deg, #0f0014 0%,#08285c 0%,#008a43 100%)";
     }
     else{
-        document.getElementById("månad").style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
+        månad.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,168,153,1) 0%, rgba(61,255,0,1) 100%)";
     }
 }
